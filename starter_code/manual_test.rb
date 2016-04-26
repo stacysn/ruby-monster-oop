@@ -1,4 +1,4 @@
-require "./solutions/stretch.rb"
+require "./starter_code/monster.rb"
 
 #### BASE CLASS ####
 puts "\n#### BASE CLASS ####"
