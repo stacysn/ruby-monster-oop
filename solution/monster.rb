@@ -113,6 +113,6 @@ module Flying
 end
 
 class Vampire < Monster
-  @class_description = "Dark and sparly."
+  @class_description = "Dark and sparkly."
   include Flying
 end
