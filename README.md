@@ -225,4 +225,4 @@ rubber_ducky = Monster.new(:friendly)
   * Looking ahead: What is inheritance?
 
 
-  ## Head over to [Part 2](part2.md)
+## Head over to [Part 2](part2.md)

@@ -109,4 +109,4 @@ dracula.fly
 
 > *Hint: when included in a class, modules can access instance variables with `self`. For example: `self.threat_level`.*
 
-This module example may not seem great alone, but you can reuse the same `Flying` module to add a fly method to a `Bird` subclass of `Animal`, a `Plane` subclass of `Vehicle`, or a `SuperHero` class. Many of Ruby's powerful built-in modules (like `Comparable`) are used as "mixins" this way.  Modules help keep code DRY and organized.
+**This module example may not seem great alone, but you can reuse the same `Flying` module to add a fly method to a `Bird` subclass of `Animal`, a `Plane` subclass of `Vehicle`, or a `SuperHero` class. Many of Ruby's powerful built-in modules (like `Comparable`) are used as "mixins" this way.  Modules help keep code DRY and organized.**
