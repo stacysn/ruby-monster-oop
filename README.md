@@ -176,9 +176,7 @@ Monster.count
 
 >```ruby
 rubber_ducky = Monster.new(:friendly)
-# /monster_stretch.rb:31:in `initialize': cannot create monster - invalid threat level friendly (RuntimeError)
-#  from manual_test.rb:99:in `new'
-#  from manual_test.rb:99:in `<main>'
+# /stretch.rb:31:in `initialize': cannot create monster - invalid threat level friendly (RuntimeError)
 ```
 
 <br>
