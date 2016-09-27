@@ -40,7 +40,7 @@ Ruby <img alt="heart" src="https://em.wattpad.com/6d0355863f6ca950858ed30d2b8b9b
 
 Hashes are simple key value stores. They look a lot like JavaScript's objects.
 
-**Hash Example**
+Hash Example:
 
 ```ruby
  our_hash = {name: "Napoleon", fav_food: "steak", skills: ["archery", "combat", "egg farming"]}
@@ -55,12 +55,12 @@ The colon notation always results in your keys being symbols, which is usually w
 Ruby also has `Object`s to organize methods and data. In fact, everything in Ruby is a `BasicObject`. However, we almost never use plain `BasicObjects` or `Object`s because there are more sophisticated, specialized classes such a `String`, `Integer`, and `Hash`.
 
 
-**Class Inheritance Tree**
+Class Inheritance Tree:
 
 ![Class inheritance](http://i.stack.imgur.com/rvcEi.png)
 
 
-**Example:**
+Example:
 How can we prove that the hash we just created is a `BasicObject`?
 
 ```ruby
