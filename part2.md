@@ -58,15 +58,23 @@ puts teen_wolf.threat_level
 
 17) **Challenge:** During a full moon, a werewolf's threat level jumps all the way up to `:midnight`. Write an `update_threat_level` method for `Werewolf` that calculates a werewolf's threat level based on a boolean parameter, `full_moon`. The `update_threat_level` method should update the werewolf's `@threat_level` and return its new value.
 
+
+> ```ruby
+teen_wolf.update_threat_level(true)
+puts teen_wolf.threat_level
+# :midnight
+```
+
+
 <br><br>
 
-18) **Challenge:** Use the class instance variable pattern to add a  `class_description` variable to the `Monster` class. The Monster class description should be `"A scary monster!"`.
+18) **Stretch Challenge:** Use the class instance variable pattern to add a  `class_description` variable to the `Monster` class. The Monster class description should be `"A scary monster!"`.
 
 > *Hint: Create an instance variable (`@class_description`) inside the Monster class, then create a class method getter for it.*
 
 <br>
 
-19) **Challenge:** Give `Zombie` and `Werewolf` their own class descriptions.
+19) **Stretch Challenge:** Give `Zombie` and `Werewolf` their own class descriptions.
 
 <br>
 
