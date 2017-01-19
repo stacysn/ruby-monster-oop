@@ -69,17 +69,17 @@ puts teen_wolf.threat_level
 
 <br><br>
 
-18) **Stretch Challenge:** Use the class instance variable pattern to add a  `class_description` variable to the `Monster` class. The Monster class description should be `"A scary monster!"`.
+18) **Class Instance Variable Part 1:** Use the class instance variable pattern to add a  `class_description` variable to the `Monster` class. The Monster class description should be `"A scary monster!"`.
 
 > *Hint: Create an instance variable (`@class_description`) inside the Monster class, then create a class method getter for it.*
 
 <br>
 
-19) **Stretch Challenge:** Give `Zombie` and `Werewolf` their own class descriptions.
+19) **Class Instance Variable Part 2:** Give `Zombie` and `Werewolf` their own class descriptions, including getters.
 
 <br>
 
-20) **Stretch Challenge:** If you had a `THREAT_LEVEL` class constant, modify `get_dangerous` to use that.
+20) **Optional Constant Part 4:** If you had a `THREAT_LEVEL` class constant, modify `get_dangerous` to use that.
 
 ## Modules
 
