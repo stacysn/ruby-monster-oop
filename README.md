@@ -168,11 +168,11 @@ Monster.count
 # => 3
 ```
 
->*Hint: Use the reserved word `self`*
+> *Hint: Use the reserved word `self`*
 
-**Note** Class variables SHOULD BE AVOIDED due to their weird behavior with inheritance!
+**Note: Class variables SHOULD BE AVOIDED due to their weird behavior with inheritance!**
 
-9) **Stretch Challenge:** Add a check so that the allowed `threat_level` values at creation are`:low`, `:medium`, `:high`, or `:midnight`.   If another value is passed in as the initial threat_level, `raise` a runtime error.
+9) **Challenge:** Add a check so that the allowed `threat_level` values at creation are`:low`, `:medium`, `:high`, or `:midnight`.   If another value is passed in as the initial threat_level, `raise` a runtime error.
 
 >```ruby
 rubber_ducky = Monster.new(:friendly)
@@ -181,7 +181,7 @@ rubber_ducky = Monster.new(:friendly)
 
 <br>
 
-10) **Stretch Challenge:** Create a class constant called `THREAT_LEVELS` that is an array containing all the allowed values of `threat_level`.
+10) **Optional Constant Part 1:** Create a class constant called `THREAT_LEVELS` that is an array containing all the allowed values of `threat_level`.
 
 >*Hint: Access the class constant with `Monster::THREAT_LEVELS`.*
 
@@ -193,11 +193,11 @@ rubber_ducky = Monster.new(:friendly)
 
 <br>
 
-12) **Stretch Challenge:** Refactor `fight` to use `index` with the `THREAT_LEVELS` array. You should be able to make `fight` code shorter and simpler.
+12) **Optional Constant Part 2:** Refactor `fight` to use `index` with the `THREAT_LEVELS` array. You should be able to make `fight` code shorter and simpler.
 
 <br>
 
-13) **Stretch Challenge:** Include <a href="http://ruby-doc.org/core-2.2.3/Comparable.html">the `Comparable` mixin</a> in your `Monster` class and create a custom `<=>` method to compare monsters based on their threat levels. Refactor `fight` to use this comparison.
+13) **Optional Constant Part 3:** Include <a href="http://ruby-doc.org/core-2.2.3/Comparable.html">the `Comparable` mixin</a> in your `Monster` class and create a custom `<=>` method to compare monsters based on their threat levels. Refactor `fight` to use this comparison.
 
 <br>
 
