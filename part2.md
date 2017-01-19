@@ -75,7 +75,7 @@ puts teen_wolf.threat_level
 
 <br>
 
-19) **Class Instance Variable Part 2:** Give `Zombie` and `Werewolf` their own class descriptions, including getters.
+19) **Class Instance Variable Part 2:** Give `Zombie` and `Werewolf` their own class descriptions.
 
 <br>
 
