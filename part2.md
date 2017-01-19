@@ -1,4 +1,5 @@
-![](http://www.newssuno.com/wp-content/uploads/2016/01/lets-gety.gif)
+<img width="300" alt="monster genetics" src="https://cloud.githubusercontent.com/assets/3254910/22097580/a217ac34-ddd6-11e6-8b8c-9214339b5dd2.png">
+
 
 ## Inheritance
 
