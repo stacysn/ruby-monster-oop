@@ -1,25 +1,30 @@
 class Monster
-  # getters and setters for instance variables
+  # makes getters and setters for instance variables
+  # also sets up the instance variables - @threat_level, @habitat, @name
   attr_accessor :threat_level, :habitat, :name
 
-  # class variable
+  # class variable (avoid)
   @@count = 0
 
-  # class instance variable
-  @class_description = "A scary monster!"
-
   # class method getter for @@count class variable
+  # note that self.____ method names are always class methods
+  # we'd call this with Monster.count
   def self.count
     @@count
   end
+  
+  # class instance variable (an alternative to class attributes)
+  @class_description = "A scary monster"
 
   # class method getter for @class_description class instance variable
+  # we'd call this with Monster.class_description, Zombie.class_description, etc.
   def self.class_description
     @class_description
   end
 
-  # initial behavior
-  def initialize(threat_level=:medium)
+  # initial behavior 
+  # runs when a monster is created with Monster.new
+  def initialize(threat_level=:medium)  #default threat level
     @threat_level = threat_level
     puts "Rawr!"
     @@count = @@count + 1
@@ -27,6 +32,7 @@ class Monster
   end
 
   # instance method
+  # call it with an instance like my_monster.habitat?
   def habitat?(some_hab)
     @habitat == some_hab
   end
@@ -47,6 +53,7 @@ class Monster
   end
 
   # class method
+  # call it with Monster.fight
   def self.fight(monster1, monster2)
     if monster1.threat_level == monster2.threat_level
       monster2
@@ -112,7 +119,7 @@ module Flying
   end
 end
 
-class Vampire < Monster
-  include Flying
+class Vampire < Monster  # vamipre inherits from Monster class...
+  include Flying         # and mixes in capabilities from Flying module!
   @class_description = "Dark and sparkly."
 end
