@@ -69,13 +69,32 @@ our_hash.is_a? BasicObject
 # => true
 ```
 
-#### Classes and Modules in JavaScript (ES6)
+## OOP in JavaScript 
+
+#### Object Types with Constructor Function and Prototype
+
+```js
+// constructor function sets up the type 
+function Car(color, model, year){
+  this.color = color;
+  this.model = model;
+  this.year = year;
+  this.wheels = 4;
+}
+
+// instance methods usually defined on prototype
+Car.prototype.repaint = function(newColor){
+  this.color = newColor;
+}
+```
+
+#### Classes and Modules (ES6)
 
 ```js
 // bring in Animal class from a different 'Animals' module
 import Animal from 'animals'
 
-// define our Dog class
+// define Dog class
 class Dog extends Animal {
   // constructor for initial behavior and state
   constructor (dogName="Good Dog") {
@@ -96,11 +115,11 @@ morocco.speak();
 export Dog
 ```
 
-## Classes
+## Classes and Ruby
 
 Ruby uses **classes** for object-oriented programming.  Classes are data types used to create more data.  They are similar to the object types we manipulated with constructors and prototypes in JavaScript.  
 
-Classes are more common among programming languages than prototypes, so we'll go into more depth about OOP with Ruby than we did with JavaScript. (Also, JavaScript has classes as of its latest version: ECMAScript 6.)
+Classes are more common among programming languages than prototypes, so we'll go into more depth about OOP with Ruby than we did with JavaScript. This will help give us extra context for JavaScript classes from ES6, like we saw with React.
 
 1) **Challenge:** Create a `Monster` class in Ruby and an instance of `Monster`.
 > *Hint: you'll have to use the Ruby reserved word `class` and the `new` method.*
@@ -121,7 +140,7 @@ Since each monster will probably have a different habitat, this is a good candid
 
 3) **Challenge:** Add a `habitat` instance variable and any instance methods needed to your Monster class to enable this code...
 
-> ```ruby
+```ruby
 rabbit = Monster.new
 # Rawr
 rabbit.habitat = "Cave of Caerbannog"
@@ -135,7 +154,7 @@ rabbit.habitat
 
 4) **Challenge:** Add a `threat_level` instance variable to the Monster class. Allow the user to specify a threat level when the monster is created.
 
->```ruby
+```ruby
 dalek = Monster.new(:high)
 dalek.threat_level
 => :high
@@ -146,17 +165,17 @@ dalek.threat_level
 
 5) **Challenge:** Allow the user to create an instance of `Monster` without specifying a threat level. The default threat level for a new monster should be `:medium`.
 
->```ruby
+```ruby
 teletubby = Monster.new
 teletubby.threat_level
 => :medium
 ```
 
-##Instance Methods
+## Instance Methods
 
 6) **Challenge:** Create a `habitat?` instance method for `Monster` that tests whether the monster's habitat matches an argument that is passed in.
 
-> ```ruby
+```ruby
 yeti = Monster.new
 # Rawr!
 yeti.habitat = "tundra"
@@ -168,13 +187,13 @@ yeti.habitat?("tundra")
 
 > *Hint: use `def` to define a new method inside the class*
 
-##Class Variables and Class Methods
+## Class Variables and Class Methods
 
 What if I wanted a running count of all the Monsters ever created?  Let's keep track with a class variable and print a message each time a new monster spawns.
 
 7) **Challenge:** Add a class variables to enable this code...
 
-> ```ruby
+```ruby
 predator = Monster.new(:high)
 # Rawr!
 # 2 monsters now roam the world!
@@ -189,7 +208,7 @@ alien = Monster.new(:high)
 
 8) **Challenge:** Create a class method to get the current value of the monster count.
 
->```ruby
+```ruby
 Monster.count
 # => 3
 ```
@@ -200,7 +219,7 @@ Monster.count
 
 9) **Challenge:** Add a check so that the allowed `threat_level` values at creation are`:low`, `:medium`, `:high`, or `:midnight`.   If another value is passed in as the initial threat_level, `raise` a runtime error.
 
->```ruby
+```ruby
 rubber_ducky = Monster.new(:friendly)
 # /stretch.rb:31:in `initialize': cannot create monster - invalid threat level friendly (RuntimeError)
 ```
@@ -229,7 +248,7 @@ rubber_ducky = Monster.new(:friendly)
 
 14) **Compassion Challenge:** Give your `Monster` class a `name` instance variable with a getter and a setter.
 
-> *Hint: only modify `initialize` as a stretch (solution not provided). If you modify `initialize` so it takes a `name` argument, update the tests to give each monster instance a name.  Wondering how you could make the `name` argument optional like `threat_level`? Look up Ruby's "keyword arguments" syntax.*
+> *Hint: only modify `initialize` as a stretch (solution not provided). If you modify `initialize` so it takes a `name` argument, update your simple test code to give each monster instance a name.  Wondering how you could make the `name` argument optional like `threat_level`? Look up Ruby's "keyword arguments" syntax.*
 
 
 <img alt="monster" src="http://blog.spoongraphics.co.uk/wp-content/uploads/2009/furry-monster/monster.jpg" width=300px>
