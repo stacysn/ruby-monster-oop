@@ -4,7 +4,7 @@ Last Edited By: Brianna
 Location: SF
 -->
 
-#<img src="https://cloud.githubusercontent.com/assets/7833470/10423298/ea833a68-7079-11e5-84f8-0a925ab96893.png" width="60"> Class-based Object Oriented Programming
+# <img src="https://cloud.githubusercontent.com/assets/7833470/10423298/ea833a68-7079-11e5-84f8-0a925ab96893.png" width="60"> Class-based Object Oriented Programming
 
 Ruby <img alt="heart" src="https://em.wattpad.com/6d0355863f6ca950858ed30d2b8b9b1fe982b54c/687474703a2f2f727562792e7a69677a6f2e636f6d2f77702d636f6e74656e742f75706c6f6164732f73697465732f322f323031332f30312f7370696b655f616e645f7261726974795f5f735f68656172745f7368617065645f666972655f727562795f62795f65647761726474656e2e706e67" width="24px">'s Object Oriented Programming
 
@@ -36,7 +36,7 @@ Ruby <img alt="heart" src="https://em.wattpad.com/6d0355863f6ca950858ed30d2b8b9b
 
 ### Review
 
-####Hashes
+#### Hashes
 
 Hashes are simple key value stores. They look a lot like JavaScript's objects.
 
@@ -50,7 +50,7 @@ Hash Example:
 
 The colon notation always results in your keys being symbols, which is usually what we want. The hash rocket notation gives you more control over the types of your keys.
 
-####Objects
+#### Objects
 
 Ruby also has `Object`s to organize methods and data. In fact, everything in Ruby is a `BasicObject`. However, we almost never use plain `BasicObjects` or `Object`s because there are more sophisticated, specialized classes such a `String`, `Integer`, and `Hash`.
 
@@ -69,8 +69,34 @@ our_hash.is_a? BasicObject
 # => true
 ```
 
+#### Classes and Modules in JavaScript (ES6)
 
-##Classes
+```js
+// bring in Animal class from a different 'Animals' module
+import Animal from 'animals'
+
+// define our Dog class
+class Dog extends Animal {
+  // constructor for initial behavior and state
+  constructor (dogName="Good Dog") {
+     this.name = dogName;
+     this.sound = 'woof';
+  }
+  // instance method for the class
+  speak () {
+     console.log(`${this.name} says ${this.sound}!`);
+  }
+}
+
+// an instance of Dog
+let morocco = new Dog('Morocco');
+morocco.speak();
+
+// export 
+export Dog
+```
+
+## Classes
 
 Ruby uses **classes** for object-oriented programming.  Classes are data types used to create more data.  They are similar to the object types we manipulated with constructors and prototypes in JavaScript.  
 
