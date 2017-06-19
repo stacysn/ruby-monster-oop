@@ -28,11 +28,11 @@ class Monster
 end
 ```
 
-... let's make a `Werewolf` class and `Zombie` class that inherit from it.
+... let's make a `Werewolf` class and `Zombie` class that inherit from it.  Feel free to start a new file with the code above.
 
 15) **Challenge:** Create a `Zombie` class that inherits from the base `Monster` class. Set it up so that all zombies (instances) start with a habitat of `"graveyard"`. That is, enable this code:
 
-> ```ruby
+```ruby
 rob = Zombie.new
 puts rob.habitat
 # "graveyard"
@@ -49,7 +49,7 @@ puts rob.name
 
 16) **Challenge:** Create a `Werewolf` class that inherits from the base `Monster` class.  Give werewolves a default initial threat level of `:low`. Enable this code:
 
-> ```ruby
+```ruby
 teen_wolf = Werewolf.new
 puts teen_wolf.threat_level
 # :low
@@ -60,7 +60,7 @@ puts teen_wolf.threat_level
 17) **Challenge:** During a full moon, a werewolf's threat level jumps all the way up to `:midnight`. Write an `update_threat_level` method for `Werewolf` that calculates a werewolf's threat level based on a boolean parameter, `full_moon`. The `update_threat_level` method should update the werewolf's `@threat_level` and return its new value.
 
 
-> ```ruby
+```ruby
 teen_wolf.update_threat_level(true)
 puts teen_wolf.threat_level
 # :midnight
@@ -97,7 +97,7 @@ Ruby <a href="http://ruby-doc.org/core-2.2.0/Module.html">`Module`</a>s group to
 
 23) **Challenge:** Use the `Flying` module to enable the following code:
 
->```ruby
+```ruby
 vamp = Vampire.new
 vamp.fly
 # it soars through the air
@@ -109,7 +109,7 @@ vamp.fly
 
 24) **Challenge:** Customize the module's message. Enable the following code:
 
->```ruby
+```ruby
 dracula = Vampire.new(:high)
 dracula.name = "Count Dracula"
 dracula.fly  
