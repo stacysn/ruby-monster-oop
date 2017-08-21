@@ -6,15 +6,21 @@ class Monster
 
   THREAT_LEVELS = [:low, :medium, :high, :midnight].freeze
 
-  def initialize(threat_level= :medium, name)
+  @class_description = "A scary monster!"
+
+  def self.class_description
+    @class_description
+  end
+
+  def initialize(threat_level= :medium)
     @threat_level = threat_level
     @name = name
     @@count = @@count + 1
 
     if @@count == 1
-      p "#{@@count} monster now"
+       "#{@@count} monster now"
     else
-      p "#{@@count} monsters now"
+       "#{@@count} monsters now"
     end
 
     if threat_level == :low || threat_level == :medium || threat_level == :high || threat_level == :midnight
@@ -56,34 +62,63 @@ class Monster
       end
   end
 
+  def get_dangerous
+    # ruby version of a switch statement is case
+    case @threat_level
+      when :low
+        @threat_level = :medium
+      when :medium
+        @threat_level = :high
+      when :high
+        @threat_level = :midnight
+      when :midnight
+        :midnight
+    end
+  end
 
   p "RAWR! "
 end
 
-voldemort = Monster.new(:low, "Voldemort")
-daryl = Monster.new(:high, "Daryl")
-p Monster.fight(voldemort, daryl)
+class Zombie < Monster
+  @class_description = "just walking corpses!"
+  def initialize ()
+    super(threat_level)
+    @habitat = "graveyard"
+  end
+
+end
+
+class Werewolf < Monster
+  @class_description = "AWHOOOOOOOOOOOO!"
+  def initialize (threat_level= :low)
+    @threat_level = threat_level
+  end
+
+  def update_threat_level(full_moon)
+    if full_moon
+      @threat_level = :midnight
+    else
+      @threat_level = :low
+    end
+    @threat_level
+  end
+
+end
+
+module Flying
+  def fly
+    p "#{self.name || "it"} soars through the air"
+  end
+end
+
+class Vampire < Monster
+  include Flying
+  @class_description = "Dark and sparkly"
+end
 
 
-# Monster class
-
-
-
-# Zombie class
-
-
-
-# Werewolf class
-
-
-
-# Flying module
-
-
-
-# Vampire class
-
-
-
-
-### "Driver" Code Area
+dracula = Vampire.new(:high)
+dracula.name = "Count Dracula"
+p dracula.fly
+# vamp = Vampire.new("Edward")
+# p vamp.fly
