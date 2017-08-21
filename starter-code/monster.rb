@@ -2,6 +2,8 @@ class Monster
   attr_accessor :habitat, :threat_level
   @@count = 0
 
+  THREAT_LEVELS = [:low, :medium, :high, :midnight].freeze
+
   def initialize(threat_level= :medium)
     @threat_level = threat_level
     @@count = @@count + 1
@@ -30,8 +32,8 @@ class Monster
   p "RAWR! "
 end
 
-p voldemort = Monster.new(:friendly)
-
+p voldemort = Monster.new(:high)
+p Monster::THREAT_LEVELS
 
 
 ### monster.rb - run this file
