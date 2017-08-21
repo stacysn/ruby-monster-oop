@@ -1,11 +1,14 @@
 class Monster
-  attr_accessor :habitat, :threat_level
+  attr_accessor :habitat, :threat_level, :name
   @@count = 0
+
+  include Comparable
 
   THREAT_LEVELS = [:low, :medium, :high, :midnight].freeze
 
-  def initialize(threat_level= :medium)
+  def initialize(threat_level= :medium, name)
     @threat_level = threat_level
+    @name = name
     @@count = @@count + 1
 
     if @@count == 1
@@ -29,14 +32,38 @@ class Monster
     @@count
   end
 
+  def <=> (other_monster)
+    Monster::THREAT_LEVELS.index(@threat_level) <=> Monster::THREAT_LEVELS.index(other_monster.threat_level)
+  end
+
+  def self.fight (monster1, monster2)
+    if monster1.threat_level == monster2.threat_level
+      monster2
+      elsif monster1.threat_level == :low
+        monster2.name
+      elsif monster1.threat_level == :medium && monster2.threat_level == :high
+        monster2.name
+      elsif monster1.threat_level == :high && monster2.threat_level == :medium
+        monster1.name
+      elsif monster1.threat_level == :high && monster2.threat_level == :low
+        monster2.name
+      else
+        if monster2.threat_level == :midnight
+          monster2.name
+        else
+          monster1.name
+        end
+      end
+  end
+
+
   p "RAWR! "
 end
 
-p voldemort = Monster.new(:high)
-p Monster::THREAT_LEVELS
+voldemort = Monster.new(:low, "Voldemort")
+daryl = Monster.new(:high, "Daryl")
+p Monster.fight(voldemort, daryl)
 
-
-### monster.rb - run this file
 
 # Monster class
 
